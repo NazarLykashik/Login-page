@@ -7,13 +7,28 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+let users: [String] = ["User"]
+let paswords: [String] = ["Pasword"]
 
+class ViewController: UIViewController {
+    @IBOutlet weak var userName: UITextField!
+    @IBOutlet weak var pasword: UITextField!
+    @IBOutlet weak var login: UIButton!
+    @IBOutlet weak var loginTXT: UIButton!
+    @IBOutlet weak var paswordTXT: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
 
+    }
+    @IBAction func checkLogin(_ sender: Any) {
+        for (first, first) in zip(users.first, users.first) {
+            if userName.text == users.username && pasword.text == users.pasword{
+                
+            }
+        }
+    }
+    
 
 }
 

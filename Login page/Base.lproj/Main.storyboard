@@ -16,44 +16,88 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fed-st-sB9">
-                                <rect key="frame" x="127" y="44" width="120" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fed-st-sB9">
+                                <rect key="frame" x="127" y="60" width="119.5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vdB-Zm-85u">
-                                <rect key="frame" x="16" y="316" width="343" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUg-8O-MAn">
+                                <rect key="frame" x="16" y="257" width="65.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vdB-Zm-85u">
+                                <rect key="frame" x="16" y="297" width="343" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUg-8O-MAn">
-                                <rect key="frame" x="16" y="278" width="66" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pasword" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7t7-fp-fAF">
+                                <rect key="frame" x="16" y="341" width="92" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5LZ-nz-M75">
-                                <rect key="frame" x="16" y="396" width="343" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pasword" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5LZ-nz-M75">
+                                <rect key="frame" x="16" y="381" width="343" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pasword" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7t7-fp-fAF">
-                                <rect key="frame" x="16" y="358" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxG-Q1-EmD">
+                                <rect key="frame" x="155" y="435" width="63.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Log in"/>
+                                <connections>
+                                    <action selector="checkLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sGf-cG-jB6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiG-Xe-Ibb">
+                                <rect key="frame" x="194.5" y="486" width="164.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Forgot your pasword?"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4G-B0-88z">
+                                <rect key="frame" x="16" y="486" width="141" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Forgot your login?"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vdB-Zm-85u" firstAttribute="top" secondItem="NUg-8O-MAn" secondAttribute="bottom" constant="10" id="0GW-2O-jHM"/>
+                            <constraint firstItem="Fed-st-sB9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="127" id="DZk-cr-JaT"/>
+                            <constraint firstItem="Fed-st-sB9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="DdR-m5-RLd"/>
+                            <constraint firstItem="7t7-fp-fAF" firstAttribute="top" secondItem="vdB-Zm-85u" secondAttribute="bottom" constant="10" id="Fm5-Oo-psH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uxG-Q1-EmD" secondAttribute="trailing" constant="156.5" id="J2d-O6-aqw"/>
+                            <constraint firstItem="uxG-Q1-EmD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="155" id="PuB-df-Sac"/>
+                            <constraint firstItem="uxG-Q1-EmD" firstAttribute="top" secondItem="5LZ-nz-M75" secondAttribute="bottom" constant="20" id="Qhe-BD-sXk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eiG-Xe-Ibb" secondAttribute="bottom" constant="150" id="RDy-2B-26Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eiG-Xe-Ibb" secondAttribute="trailing" constant="16" id="RGd-vb-YPp"/>
+                            <constraint firstItem="7t7-fp-fAF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="aOm-8i-zOd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5LZ-nz-M75" secondAttribute="trailing" constant="16" id="aoE-hL-vmo"/>
+                            <constraint firstItem="NUg-8O-MAn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="c8f-ca-0Kw"/>
+                            <constraint firstItem="NUg-8O-MAn" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Fed-st-sB9" secondAttribute="bottom" constant="100" id="dz5-LC-xGq"/>
+                            <constraint firstItem="J4G-B0-88z" firstAttribute="top" secondItem="uxG-Q1-EmD" secondAttribute="bottom" constant="20" id="k88-O1-KKh"/>
+                            <constraint firstItem="J4G-B0-88z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="lDm-qr-F3b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vdB-Zm-85u" secondAttribute="trailing" constant="16" id="lTR-ml-iMY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fed-st-sB9" secondAttribute="trailing" constant="128.5" id="lZq-W4-kUi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="J4G-B0-88z" secondAttribute="bottom" constant="150" id="mxo-wB-PsP"/>
+                            <constraint firstItem="vdB-Zm-85u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="rsu-uR-1l0"/>
+                            <constraint firstItem="5LZ-nz-M75" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="x3J-hv-cSC"/>
+                            <constraint firstItem="eiG-Xe-Ibb" firstAttribute="top" secondItem="uxG-Q1-EmD" secondAttribute="bottom" constant="20" id="yvu-Zh-2F0"/>
+                            <constraint firstItem="5LZ-nz-M75" firstAttribute="top" secondItem="7t7-fp-fAF" secondAttribute="bottom" constant="10" id="z4X-dQ-m93"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7Nr-Vv-0rh"/>
+                    <connections>
+                        <outlet property="login" destination="uxG-Q1-EmD" id="xyc-GR-6aP"/>
+                        <outlet property="loginTXT" destination="J4G-B0-88z" id="ybi-aG-jbg"/>
+                        <outlet property="pasword" destination="5LZ-nz-M75" id="6n6-UL-3wa"/>
+                        <outlet property="paswordTXT" destination="eiG-Xe-Ibb" id="o4g-A3-fDl"/>
+                        <outlet property="userName" destination="vdB-Zm-85u" id="bD0-Up-toi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -84,8 +128,20 @@
                     <view key="view" contentMode="scaleToFill" id="sd9-vq-hps">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEa-NK-CWU">
+                                <rect key="frame" x="114.5" y="315.5" width="146" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="eve-Ob-V3P"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.074370495975017548" green="0.80579864978790283" blue="0.58842599391937256" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vEa-NK-CWU" firstAttribute="centerY" secondItem="eve-Ob-V3P" secondAttribute="centerY" id="ShW-M7-JV6"/>
+                            <constraint firstItem="vEa-NK-CWU" firstAttribute="centerX" secondItem="eve-Ob-V3P" secondAttribute="centerX" id="fEb-Ge-2TP"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0d3-g5-Pwq"/>
                 </viewController>
