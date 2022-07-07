@@ -42,14 +42,15 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pasword" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5LZ-nz-M75">
                                 <rect key="frame" x="16" y="381" width="343" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxG-Q1-EmD">
                                 <rect key="frame" x="155" y="435" width="63.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Log in"/>
                                 <connections>
-                                    <action selector="checkLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sGf-cG-jB6"/>
+                                    <action selector="checkLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1oC-3L-czc"/>
+                                    <segue destination="zwm-as-84n" kind="show" id="DjK-qS-QPj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiG-Xe-Ibb">
@@ -94,7 +95,7 @@
                     <connections>
                         <outlet property="login" destination="uxG-Q1-EmD" id="xyc-GR-6aP"/>
                         <outlet property="loginTXT" destination="J4G-B0-88z" id="ybi-aG-jbg"/>
-                        <outlet property="pasword" destination="5LZ-nz-M75" id="6n6-UL-3wa"/>
+                        <outlet property="password" destination="5LZ-nz-M75" id="m7L-rX-F7z"/>
                         <outlet property="paswordTXT" destination="eiG-Xe-Ibb" id="o4g-A3-fDl"/>
                         <outlet property="userName" destination="vdB-Zm-85u" id="bD0-Up-toi"/>
                     </connections>
@@ -121,16 +122,16 @@
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="83.705357142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="Aje-Uq-iuG">
             <objects>
-                <viewController id="zwm-as-84n" customClass="ViewController" customModule="Login_page" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="vc" id="zwm-as-84n" customClass="WelcomeViewController" customModule="Login_page" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sd9-vq-hps">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEa-NK-CWU">
-                                <rect key="frame" x="114.5" y="315.5" width="146" height="36"/>
+                                <rect key="frame" x="114.5" y="337.5" width="146" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
