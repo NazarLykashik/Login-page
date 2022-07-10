@@ -24,13 +24,12 @@ class ViewController: UIViewController {
 
     }
     @IBAction func checkLogin(_ sender: Any) {
-        if self.userName.text == storedUsername && self.password.text == storedPassword {
+        if (self.userName.text == storedUsername && self.password.text == storedPassword) {
             self.authenticationDidFail = true
-            print("nkjdfn")
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let WelcomeViewController = storyBoard.instantiateViewController(withIdentifier: "vc") as! WelcomeViewController
             self.present(WelcomeViewController, animated: true, completion: nil)
-                
+                print("fljsd")
             }
         }
 
