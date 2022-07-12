@@ -15,8 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var login: UIButton!
     @IBOutlet weak var loginTXT: UIButton!
     @IBOutlet weak var paswordTXT: UIButton!
-    let storedUsername = "User"
-    let storedPassword = "Password"
+    private let storedUsername = "User"
+    private let storedPassword = "Password"
     var authenticationDidFail: Bool = false
     
     override func viewDidLoad() {
@@ -29,24 +29,30 @@ class ViewController: UIViewController {
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let WelcomeViewController = storyBoard.instantiateViewController(withIdentifier: "vc") as! WelcomeViewController
             self.present(WelcomeViewController, animated: true, completion: nil)
-            }
+        }else {
+           showAlert(title: "Oops", messege: "Wrong data!", textField: password)
+            return
+        }
         }
 
     @IBAction func forgotLogin(_ sender: Any) {
-        let loginAlert = UIAlertController(title: "Login", message: "Your login is: User", preferredStyle: .alert)
-        let loginAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
-        loginAlert.addAction(loginAction)
-        present(loginAlert, animated: true, completion: nil)
+        showAlert(title: "User name", messege: "Your login is: \(storedUsername)")
     }
     
     @IBAction func forgotPassword(_ sender: Any) {
-        let passwordAlert = UIAlertController(title: "Password", message: "Your password is: Password", preferredStyle: .alert)
-        let passwordAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
-        passwordAlert.addAction(passwordAction)
-        present(passwordAlert, animated: true, completion: nil)
+    showAlert(title: "Password", messege: "Your password is \(storedPassword)")
         
     }
+    private func showAlert(title: String, messege: String, textField: UITextField? = nil){
+        let alert = UIAlertController(title: title, message: messege, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default) {
+            _ in textField?.text = nil
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true)
     
+        
+    }
 
 
 
