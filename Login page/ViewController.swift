@@ -24,15 +24,8 @@ class ViewController: UIViewController {
 
     }
     @IBAction func checkLogin(_ sender: Any) {
-        if (self.userName.text == storedUsername && self.password.text == storedPassword) {
-            self.authenticationDidFail = true
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let WelcomeViewController = storyBoard.instantiateViewController(withIdentifier: "vc") as! WelcomeViewController
-            self.present(WelcomeViewController, animated: true, completion: nil)
-        }else {
-           showAlert(title: "Oops", messege: "Wrong data!", textField: password)
-            return
-        }
+        logIn()
+
         }
 
     @IBAction func forgotLogin(_ sender: Any) {
@@ -53,8 +46,36 @@ class ViewController: UIViewController {
     
         
     }
+    private func logIn(){
+        if (self.userName.text == storedUsername && self.password.text == storedPassword) {
+            self.authenticationDidFail = true
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let WelcomeViewController = storyBoard.instantiateViewController(withIdentifier: "vc") as! WelcomeViewController
+            self.present(WelcomeViewController, animated: true, completion: nil)
+        }else {
+           showAlert(title: "Oops", messege: "Wrong data!", textField: password)
+            return
+        }
+    }
 
 
 
     
+}
+
+extension ViewController: UITextFieldDelegate{
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super .touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == userName{
+            textField.resignFirstResponder()
+            password.becomeFirstResponder()
+        }else{
+            logIn()
+        }
+    return true
+}
 }
